@@ -1,10 +1,10 @@
 fx_version 'cerulean'
 
 game 'gta5'
+author 'AJC - Services'
+description 'Change your Outfit with a Item'
 
-description 'AJC-Outfitchange'
-
-version '1.0.0'
+version '1.0'
 
 client_scripts {
 	'@es_extended/locale.lua',
@@ -23,5 +23,6 @@ shared_scripts {
 	}
 
 dependencies {
-	'es_extended'
+	'es_extended',
+	'skinchanger'
 }

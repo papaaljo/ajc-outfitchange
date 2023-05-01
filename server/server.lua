@@ -1,7 +1,7 @@
 ESX = exports["es_extended"]:getSharedObject()
 
 --# Outfitchange 1 
-ESX.RegisterUsableItem('outfit_1', function(source)	--# ITEM #--
+ESX.RegisterUsableItem('outfit_razzia', function(source)	--# ITEM #--
 	local xPlayer = ESX.GetPlayerFromId(source)
 
 	if xPlayer.job.name == 'police' or xPlayer.job.name == 'fib' or xPlayer.job.name == 'sherriff' then 	-- To add more Jobs add this: or xPlayer.job.name == 'JOB'
@@ -10,7 +10,7 @@ ESX.RegisterUsableItem('outfit_1', function(source)	--# ITEM #--
 	xPlayer.removeInventoryItem('outfit_razzia', 1)		--# ITEM #--
 	else
 
-	ESX.ShowNotification("You are not allowed to do this!")
+		TriggerClientEvent('esx:showNotification', source, 'You are not allowed to do this!')
 
 	end
 end)
@@ -25,7 +25,9 @@ ESX.RegisterUsableItem('outfit_2', function(source)	--# ITEM #--
 	xPlayer.removeInventoryItem('outfit_2', 1)		--# ITEM #--
 	else
 
-	ESX.ShowNotification("You are not allowed to do this!")
+		TriggerClientEvent('esx:showNotification', source, 'You are not allowed to do this!')
 
 	end
 end)
+
+-- ADD NEW ITEM HERE
